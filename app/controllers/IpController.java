@@ -5,6 +5,7 @@ import java.util.concurrent.CompletionStage;
 import javax.inject.Inject;
 
 import clients.HTTPClient;
+import models.IPAddress;
 import play.mvc.Controller;
 import play.mvc.Result;
 
@@ -19,8 +20,9 @@ public class IpController extends Controller {
     public IpController(HTTPClient client) {
       this.client = client;
     }
+
     public CompletionStage<Result> getIP() {
-        return client.getIP().thenApply(x -> ok(x));
+        return client.getIP().thenApply(x -> ok(new IPAddress(x).toString()));
     }
 
 }

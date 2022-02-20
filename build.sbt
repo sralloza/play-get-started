@@ -9,5 +9,6 @@ scalaVersion := "2.13.8"
 
 libraryDependencies ++= Seq(
     guice,
-    javaWs
+    javaWs,
+    "org.projectlombok" % "lombok" % "1.18.22"
 )
