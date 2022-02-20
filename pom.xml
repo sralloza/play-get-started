@@ -57,6 +57,11 @@
       <artifactId>play-guice_2.13</artifactId>
       <version>2.8.13</version>
     </dependency>
+    <dependency>
+      <groupId>com.typesafe.play</groupId>
+      <artifactId>play-ahc-ws_2.13</artifactId>
+      <version>2.8.13</version>
+    </dependency>
   </dependencies>
   <build>
     <sourceDirectory>app</sourceDirectory>
