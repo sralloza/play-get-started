@@ -1,4 +1,4 @@
-package clients;
+package services;
 
 import java.util.concurrent.CompletionStage;
 
@@ -9,11 +9,11 @@ import play.libs.ws.WSBodyWritables;
 import play.libs.ws.WSClient;
 import play.libs.ws.WSRequest;
 
-public class HTTPClient implements WSBodyReadables, WSBodyWritables {
+public class IPService implements WSBodyReadables, WSBodyWritables {
   private final WSClient ws;
 
   @Inject
-  public HTTPClient(WSClient ws) {
+  public IPService(WSClient ws) {
     this.ws = ws;
   }
 
