@@ -2,5 +2,7 @@
 # This file defines all application routes (Higher priority routes first)
 # ~~~~
 
-# An example controller showing a sample home page
-GET     /ip                         controllers.IpController.getIP()
+GET     /ip                         controllers.IPController.getIP()
+
+GET     /facts                      controllers.FactsController.getFact()
+GET     /facts/:n                   controllers.FactsController.getFacts(n: Integer)
